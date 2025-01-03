@@ -9,7 +9,7 @@ function InputArea ({ children }) {
 }
 
 InputArea.propTypes = {
-    children: PropTypes.element.isRequired
+    children: PropTypes.array
 }
 
 export default InputArea;
