@@ -5,6 +5,8 @@ import InputArea from "../components/InputArea";
 import Button from "../components/Button";
 import TitleInputArea from "../components/TitleInputArea";
 
+const BASE_URL = import.meta.env.VITE_BASE_URL;
+
 function Login() {
     let [Email, setEmail] = useState('');
     let [Senha, setSenha] = useState('');
