@@ -5,9 +5,9 @@ function Subtitle({ ask, link, toRouter }) {
     const navigate = useNavigate();
 
     return (
-        <>
+        <div className='Subtitle'>
             <p>{ask} <a onClick={() => navigate(toRouter)}>{link}</a></p>
-        </>
+        </div>
     )
 }
 

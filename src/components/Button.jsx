@@ -2,7 +2,14 @@ import PropTypes from 'prop-types'
 
 function Button({ content, event }) {
     return (
-        <button onClick={event}>{content}</button>
+        <div className="ContainerSubmitButton">
+            <button
+                className='SubmitButton'
+                onClick={event}
+            >
+                {content}
+            </button>
+        </div>
     )
 }
 

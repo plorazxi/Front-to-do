@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 
 function Label({ name, placeholder, type, value, onChange }) {
     return (
-        <>
-            <h2>{name}</h2>
+        <div className='Label'>
+            <h3>{name}:</h3>
             <input 
                 name={name} 
                 type={type} 
@@ -11,7 +11,7 @@ function Label({ name, placeholder, type, value, onChange }) {
                 value={value} 
                 onChange={(e) => onChange(e.target.value)} 
             />
-        </>
+        </div>
     )
 }
 

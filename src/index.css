@@ -1,0 +1,85 @@
+:root {
+    --blue-theme1: #0097E5;
+    --blue-theme2: #6DD3FF;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/**
+Estelização do InputArea
+*/ 
+#InputArea {
+    display: flexbox;
+    margin: auto;
+    background-color: var(--blue-theme1);
+    border-radius: 20px;
+}
+
+.title {
+    text-align: center;
+    color: white;
+}
+
+.title h1, .title h2 {
+    margin: 10%;
+}
+
+/**
+Estilização do Label
+*/
+.Label h3 {
+    margin: 5px;
+    margin-top: 13px;
+    font-size: medium;
+    color: white;
+}
+
+.Label input {
+    border-radius: 30px;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 25px;
+}
+
+/**
+Estilização do Subtitle
+*/
+.Subtitle {
+    text-align: center;
+}
+
+.Subtitle p {
+    margin: 10px;
+    margin-top: 20px;
+    font-size: small;
+    color: white;
+}
+
+.Subtitle a {
+    text-decoration: underline;
+}
+
+/** 
+Estilização do Button
+*/
+.ContainerSubmitButton {
+    text-align: center;
+}
+
+.SubmitButton {
+    all: unset;
+    margin: 10px;
+    margin-bottom: 10%;
+    background-color: var(--blue-theme2);
+    border-radius: 30px;
+    padding: 3px 25px;
+}
