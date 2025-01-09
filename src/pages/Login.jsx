@@ -46,8 +46,10 @@ function Login() {
     return (
         <InputArea>
             <TitleInputArea className="title">
-                <h1>To-do-list</h1>
-                <h2>Login</h2>
+                <>
+                    <h1>To-do-list</h1>
+                    <h2>Login</h2>
+                </>
             </TitleInputArea>
             <Label type='text' name="Email" placeholder="Digite o seu email" value={Email} onChange={setEmail} />
             <Label type='password' name="Senha" placeholder="Digite sua senha" value={Senha} onChange={setSenha} />

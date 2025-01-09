@@ -50,8 +50,10 @@ function Register() {
     return (
         <InputArea>
             <TitleInputArea>
-                <h1>To-do-list</h1>
-                <h2>Register</h2>
+                <>
+                    <h1>To-do-list</h1>
+                    <h2>Register</h2>
+                </>
             </TitleInputArea>
             <Label name="Nome" placeholder="Digite seu nome" type="text" value={Nome} onChange={setNome} />
             <Label name="Email" placeholder="Digite seu email" type="text" value={Email} onChange={setEmail} />

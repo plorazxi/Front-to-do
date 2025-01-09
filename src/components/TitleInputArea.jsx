@@ -9,7 +9,7 @@ function TitleInputArea ({children}) {
 }
 
 TitleInputArea.propTypes = {
-    children: PropTypes.array
+    children: PropTypes.element
 }
 
 export default TitleInputArea;
