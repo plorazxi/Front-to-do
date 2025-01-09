@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Label from "../components/label";
+import Label from "../components/Label";
 import Subtitle from "../components/Subtitle";
 import InputArea from "../components/InputArea";
 import Button from "../components/Button";

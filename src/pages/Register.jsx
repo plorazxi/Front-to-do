@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from "../components/Button";
 import InputArea from "../components/InputArea";
-import Label from "../components/label";
+import Label from "../components/Label";
 import Subtitle from "../components/Subtitle";
 import TitleInputArea from "../components/TitleInputArea";
 import { useNavigate } from "react-router-dom";
