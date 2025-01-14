@@ -1,6 +1,7 @@
 :root {
     --blue-theme1: #0097E5;
     --blue-theme2: #6DD3FF;
+    --gray-theme: #D9D9D9;
 }
 
 * {
@@ -91,4 +92,43 @@ Estilização do Button
     background-color: var(--blue-theme2);
     border-radius: 30px;
     padding: 3px 25px;
+}
+
+/**
+Estilizando TaskArea
+*/
+.TaskArea {
+    margin: 20px 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.TaskArea .TaskItem {
+    flex: 1;
+    text-align: center;
+    background-color: var(--gray-theme);
+    border-radius: 20px ;
+    padding: 3px;
+}
+
+.TaskArea .TaskItemSmall {
+    flex: 0.7;
+}
+
+.TaskArea .TaskItemLarge {
+    flex: 5;
+    text-align: center;
+    background-color: var(--gray-theme);
+    border-radius: 20px ;
+}
+
+.TaskArea #Completed {
+    text-decoration: line-through;
+}
+
+.TaskArea #Trash {
+    height: 20px;
+    padding: 4px;
 }
