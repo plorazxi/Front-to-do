@@ -11,7 +11,7 @@ const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 function Home() {
     const navigate = useNavigate();
-    const token = localStorage.getItem('token');
+    const Token = localStorage.getItem('token');
 
     let [Titulo, setTitulo] = useState('');
     let [Subtitulo, setSubtitulo] = useState('');
@@ -19,7 +19,7 @@ function Home() {
 
     useEffect(() => {
         // Verifica se está logado
-        if (!token) {
+        if (!Token) {
             navigate('/login');
         }
         GetTasks();
@@ -27,7 +27,7 @@ function Home() {
     }, []);
 
     async function GetTasks() {
-        let request = await fetch(BASE_URL+'/'+token);
+        let request = await fetch(BASE_URL+'/'+Token);
         if(!request.ok) {
             navigate('/login');
             return ;
@@ -36,7 +36,7 @@ function Home() {
         setTasks(data);
     }
 
-    function CreateTask() {
+    async function CreateTask() {
         // Verificando se todas as respostas estão preenchidas
         let variaveis = [Titulo, Subtitulo];
         if (!variaveis.every((variavel) => variavel != null && variavel.trim() !== "")) {
@@ -44,6 +44,25 @@ function Home() {
             return;
         }
         // Criação da tarefa
+        let body = {
+            titulo: Titulo,
+            subtitulo: Subtitulo,
+            token: Token
+        }
+        let request = await fetch(BASE_URL+'/create-task', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
+        });
+        if(request.status == 401) {
+            navigate('/login')
+        } else if(!request.ok) {
+            alert('Opa.. \nAlgo deu errado..');
+            navigate('/login');
+        }
+        GetTasks();
     }
 
     function DeleteTask() {
