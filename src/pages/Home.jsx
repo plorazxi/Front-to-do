@@ -23,12 +23,16 @@ function Home() {
             navigate('/login');
         }
         GetTasks();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     async function GetTasks() {
         let request = await fetch(BASE_URL+'/'+token);
+        if(!request.ok) {
+            navigate('/login');
+            return ;
+        }
         let data = await request.json();
-        console.log(data);
         setTasks(data);
     }
 
